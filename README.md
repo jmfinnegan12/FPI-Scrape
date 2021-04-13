@@ -1,15 +1,15 @@
 # FPI-Scrape
 
-## Comparison of ESPN FPI (Football Power Index) to Las Vegas betting odds in order to recommend statistically favorable bets
+Comparison of ESPN FPI (Football Power Index) to Las Vegas betting odds in order to recommend statistically favorable bets
 
-### Project Goals:
+## Project Goals:
 - Web Scraping
 - Implied odds calculations
 - Data Analysis
 - Bet Recommendations
 
 
-### Web Scraping
+## Web Scraping
 My web scraping required the following modules:
 ```python
 import requests
@@ -81,7 +81,7 @@ def getFPI():
     return df
 ```
 
-### Implied Odds Calculations
+## Implied Odds Calculations
 #### Negative American Odds (favorite)
 implied probability = negative odds / (negative odds + 100) * 100
 
@@ -99,11 +99,11 @@ points_FPI = points_FPI.set_index('TEAM')
 points_FPI['FPI'] = points_FPI['FPI'].astype(float)
 ```
 
-### Data Analysis
+###Data Analysis
 ESPN FPI gives both a win probability and an expected margin of victory against an average team. An above average team will have a positive value, an average team will have a value of zero, and a below average team will have a negative value. I compared the FPI win probability to the implied Vegas win probability I calculated above. I also compared the expected margin of victory to the FPI predicted margin of victory. I generated a dataframe for each comparison, and the head of each dataframe is shown below:  
-##### Money Line Comparison
+#### Money Line Comparison
 ![](https://github.com/jmfinnegan12/FPI-Scrape/blob/main/Photos/ML_table.PNG)  
-##### Point Spread Comparison  
+#### Point Spread Comparison  
 ![](https://github.com/jmfinnegan12/FPI-Scrape/blob/main/Photos/Spread_Table.PNG)
 
 ### Bet Recommendations
