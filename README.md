@@ -28,7 +28,7 @@ def getESPNlines():
     return dfs
 ```  
     
-The ESPN FPI data was in a more complicated HTML format, so I used `BeautifulSoup` to scrape that. Here is a sample of the code:
+The [ESPN FPI data](https://www.espn.com/nfl/fpi) was in a more complicated HTML format, so I used `BeautifulSoup` to scrape that. Here is a sample of the code:
 
 ```python
 # up to date FPI function
@@ -107,4 +107,6 @@ ESPN FPI gives both a win probability and an expected margin of victory against 
 ![](https://github.com/jmfinnegan12/FPI-Scrape/blob/main/Photos/Spread_Table.PNG)
 
 ### Bet Recommendations
-The output dataframes shown above are sorted by the most statistically favorable bets, also known as 'edge', in descending order. Generally the Las Vegas betting markets and ESPN's FPI algorithms are very close, and according to [Wikipedia](https://en.wikipedia.org/wiki/Football_Power_Index#cite_note-2), FPI outperformed Las Vegas closing lines in 2016. This fact presents an interesting opportunity for back testing on historical FPI and betting data. A model could be developed based on historical data to identify where FPI could have an advantage over Vegas and lead to more proffitable betting opportunities. As far as I am aware, historical FPI data is not available, so for now this project will just be a fun way to add a bit more excitement to the NFL season
+The output dataframes shown above are sorted by the most statistically favorable bets, also known as 'edge', in descending order. Generally the Las Vegas betting markets and ESPN's FPI algorithms are very close, and according to [Wikipedia](https://en.wikipedia.org/wiki/Football_Power_Index#cite_note-2), FPI outperformed Las Vegas closing lines in 2016. This fact presents an interesting opportunity for back testing on historical FPI and betting data.  
+A model could be developed based on historical data to identify where FPI could have an advantage over Vegas and lead to more proffitable betting opportunities. A likely more proffitable venture would be to apply this analyis to mid-major college sports or foreign leagues whose betting markets are far less efficient than that of the NFL.  
+However, as far as I am aware, historical FPI data is not available, so for now this project will just be a fun way to add a bit more excitement to the NFL season
